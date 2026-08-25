@@ -26,7 +26,8 @@ Framework demos are easy. **Measurable retrieval + production LLM edges** are wh
 |---------|-----------|-------|
 | **[lattice](https://github.com/akashdutta1030hr-beep/lattice)** | Hybrid RAG from first principles — BM25, dense cosine, RRF, nDCG/MRR, bootstrap CIs. Zero API keys in CI. | Python · NumPy · pytest |
 | **[forge-gateway](https://github.com/akashdutta1030hr-beep/forge-gateway)** | OpenAI-compatible edge: API keys → principals, token buckets, circuit breaker, request IDs. | Go · stdlib HTTP |
-| **[Dyck_Task](https://github.com/akashdutta1030hr-beep/Dyck_Task)** | Dyck-language dataset generator for structure / reasoning evals. | Python |
+| **[Dyck_Task](https://github.com/akashdutta1030hr-beep/Dyck_Task)** | Dyck-language generator + LoRA fine-tune with reasoning traces. | Python · Unsloth |
+| **[Fine-tuning](https://github.com/akashdutta1030hr-beep/Fine-tuning)** | PEFT comparison — LoRA, QLoRA, prefix & prompt tuning on Qwen3-0.6B. | Jupyter · PEFT |
 
 ```text
 Query ──► BM25 ──┐
