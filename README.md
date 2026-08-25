@@ -2,74 +2,39 @@
 
 # Akash Dutta
 
-### Senior AI / ML Engineer · Retrieval Systems · LLM Infrastructure
+**Senior AI / ML Engineer**
 
-[![Email](https://img.shields.io/badge/email-akashdutta1030hr%40gmail.com-555?logo=gmail&logoColor=white)](mailto:akashdutta1030hr@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-akashdutta1030hr--beep-181717?logo=github)](https://github.com/akashdutta1030hr-beep)
-[![Hireable](https://img.shields.io/badge/open_to-work-yes-2ea44f)](https://github.com/akashdutta1030hr-beep)
+Retrieval systems · LLM evaluation · production ML infrastructure
+
+[![Email](https://img.shields.io/badge/Email-akashdutta1030hr%40gmail.com-555?style=flat-square&logo=gmail&logoColor=white)](mailto:akashdutta1030hr@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-akashdutta1030hr--beep-181717?style=flat-square&logo=github)](https://github.com/akashdutta1030hr-beep)
 
 </div>
 
 ---
 
-I build the **unsexy half of applied AI** — the parts that decide whether a system ships or dies in production:
+I design and ship the layer of applied AI that survives production: **retrieval quality you can measure**, **eval harnesses with real statistics**, and **services that stay up when the model API fails**.
 
-- Did hybrid retrieval actually beat BM25, or was it noise on 40 queries?
-- When OpenAI 500s, does your app retry-storm the vendor or fail fast?
-- Can you explain every line of your eval harness in a staff interview?
+Not prompt engineering slides — systems you can defend in a staff interview.
 
-Framework demos are easy. **Measurable retrieval + production LLM edges** are what senior loops test.
+### Focus
 
-## Featured projects
+- Hybrid & lexical retrieval (BM25, dense, fusion, reranking)
+- RAG evaluation — nDCG, MRR, bootstrap intervals, paired tests
+- Parameter-efficient fine-tuning (LoRA, QLoRA, PEFT)
+- LLM edge infrastructure — auth, rate limits, circuit breakers, observability
 
-| Project | One-liner | Stack |
-|---------|-----------|-------|
-| **[lattice](https://github.com/akashdutta1030hr-beep/lattice)** | Hybrid RAG from first principles — BM25, dense cosine, RRF, nDCG/MRR, bootstrap CIs. Zero API keys in CI. | Python · NumPy · pytest |
-| **[forge-gateway](https://github.com/akashdutta1030hr-beep/forge-gateway)** | OpenAI-compatible edge: API keys → principals, token buckets, circuit breaker, request IDs. | Go · stdlib HTTP |
-| **[Dyck_Task](https://github.com/akashdutta1030hr-beep/Dyck_Task)** | Dyck-language generator + LoRA fine-tune with reasoning traces. | Python · Unsloth |
-| **[Fine-tuning](https://github.com/akashdutta1030hr-beep/Fine-tuning)** | PEFT comparison — LoRA, QLoRA, prefix & prompt tuning on Qwen3-0.6B. | Jupyter · PEFT |
+### How I work
 
-```text
-Query ──► BM25 ──┐
-                 ├── RRF ──► Grounded prompt ──► LLM
-Query ──► Dense ─┘              ▲
-                                │
-                     EvalRunner (nDCG + 95% CI)
-```
+- Measure **retrieval before generation**
+- Report **uncertainty**, not a single accuracy number
+- Prefer **small, readable code** over framework soup
+- **Production path first** — auth, load shedding, traces — then model tweaks
 
-**Lattice** — retrieval quality measured *before* generation. **Forge** — the gateway layer when LLM traffic hits production.
+### Stack
 
-## How I work
+Python · Go · Java · JavaScript · PyTorch · NumPy · Docker · GitHub Actions · pytest · information retrieval · LLM ops
 
-| Principle | In practice |
-|-----------|-------------|
-| **Separate retrieval from generation** | Eval the retriever on labeled queries without calling an LLM |
-| **Intervals, not point estimates** | Bootstrap CIs and paired tests on the same query set |
-| **Small, readable libraries** | BM25 IDF and RRF implemented in-repo — interview-readable |
-| **Production before prompts** | Auth, rate limits, circuit breakers, traces |
+### Contact
 
-## Stack
-
-`Python` · `Go` · `Java` · `JavaScript` · NumPy · information retrieval · LLM eval · HTTP systems · Docker · GitHub Actions · pytest · `go test`
-
-## 60-second demo
-
-```bash
-# Hybrid retrieval eval (offline, no API keys)
-git clone https://github.com/akashdutta1030hr-beep/lattice && cd lattice
-pip install -e ".[dev]" && pytest -q && python examples/run_eval.py
-
-# LLM gateway (mock upstream included)
-git clone https://github.com/akashdutta1030hr-beep/forge-gateway && cd forge-gateway
-docker compose up --build
-curl -s localhost:8080/healthz
-```
-
-## Contact
-
-- **Email:** [akashdutta1030hr@gmail.com](mailto:akashdutta1030hr@gmail.com)
-- **GitHub:** [akashdutta1030hr-beep](https://github.com/akashdutta1030hr-beep)
-
----
-
-<sub>Pin **lattice** and **forge-gateway** on my profile · MIT licensed flagship repos · CI green on every push</sub>
+akashdutta1030hr@gmail.com · [github.com/akashdutta1030hr-beep](https://github.com/akashdutta1030hr-beep)
